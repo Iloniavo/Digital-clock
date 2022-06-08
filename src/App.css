@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body{
+  background-color: #282c34;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding :0;
+  box-sizing :border-box; 
+}
 .App {
   text-align: center;
 }
@@ -35,4 +48,125 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.lera{
+  color : rgb(65, 202, 65);
+  text-align: center;
+  margin-top : 10vh;
+  font-size: clamp(4px, 20vw , 150px);
+  display: flex;
+  justify-content: center;
+  
+}
+
+#toggle{
+ 
+  text-transform: uppercase;
+  color: rgb(65, 202, 65);
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  letter-spacing: 0.1rem;
+  font-size: calc(10px + 2vmin);
+  transition: 0.3s;
+  border: 0.1rem solid  rgb(65, 202, 65);
+  width: 25%;
+  height: 2.5ch;
+  padding: 5px;
+  margin: 5rem auto;
+  border-radius: 1rem;
+
+}
+
+#toggle:hover{
+  letter-spacing: 0.25rem;
+  width: 27%;
+  color: #282c34;
+  background:  rgb(65, 202, 65);
+  box-shadow: 1px 1px 1px 1px rgb(98, 214, 98);
+}
+
+
+#toggle span{
+  position: relative;
+  z-index: 1;
+}
+
+.corps{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.input{
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ width: 70%;
+ }
+
+input{
+  width: 25%;
+  border-radius: 10px;
+  height: 8vh;
+  padding-left: 2vw;
+  font-size: 1.6rem;
+  background: whitesmoke;
+}
+
+.output{
+  color: rgb(65, 202, 65);
+  font-size: 9ch;
+}
+
+.bouton{
+  width: 50%;
+  display: flex;
+ align-items: center;
+ justify-content: space-around;
+}
+
+button{
+  width: 25%;
+  height: 3ch;
+  font-size: 1.2rem;
+  background-color: #282c34;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+#start{
+  
+  border: 2px solid rgb(64, 150, 203);
+  color: rgb(64, 150, 203);
+}
+#stop{
+  border : 2px solid rgb(210, 78, 78);
+  color:  rgb(210, 78, 78);
+}
+#reset{
+  border : 2px solid goldenrod;
+  color : goldenrod
+}
+
+#start:hover{
+  font-size: 1.4rem;
+  border:#282c34;
+  color: #282c34;
+  background: rgb(64, 150, 203);
+}
+#stop:hover{
+  font-size: 1.4rem;
+  border:#282c34;
+  color: #282c34;
+  background: rgb(210, 78, 78);
+}
+
+#reset:hover{
+  font-size: 1.4rem;
+  border:#282c34;
+  color: #282c34;
+  background: goldenrod;
 }

@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import Clock from './components/clock';
 import './App.css';
+import {  useState } from 'react';
+import Timer from './components/timer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [ state , setState ] = useState(true); 
+  const toggle = () => {
+    setState(!state);
+  } 
+  let affiche;
+  let label;
+  if(state){
+     affiche = <Clock/>;
+     label = "Switch to timer";
+  }
+  else {
+     affiche = <Timer/>;
+     label = "Switch to clock";
+  }
+    return (
+          <>
+         <div onClick={toggle} id="toggle">
+           <span> {label}</span> <i></i>
+          </div>
+          {affiche}
+          </>
+     )
 }
+
 
 export default App;
